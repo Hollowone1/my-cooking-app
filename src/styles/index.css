@@ -5,7 +5,13 @@
 .card {
     background-color: theme('colors.white');
     border-radius: theme('borderRadius.lg');
-    padding: theme('spacing.6');
+    padding: theme('spacing.12');
     box-shadow: theme('boxShadow.xl');
+    border: 1px solid #33ACFF;
+  }
+
+  .autocomplete{
+    background-color: theme('colors.white');
+    padding: theme('spacing.4');
     border: 1px solid #33ACFF;
   }
