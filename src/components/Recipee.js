@@ -9,13 +9,22 @@ const Recipee = () => {
 
     useEffect(() =>{
         axios.get("https://www.themealdb.com/api/json/v1/1/random.php")
-        .then((res)=> setData(res.data))
-    })
+        .then((res)=> setData(res.data.meals))
+    }, [])
 
 
     return (
         <div>
-            
+            <ul>
+                {
+                    data && data? data.map((meals)=>
+                    <Cards key={meals.idMeal} meals={meals}>
+
+                    </Cards>
+                    ):[]
+                }
+
+            </ul>
         </div>
     );
 };
